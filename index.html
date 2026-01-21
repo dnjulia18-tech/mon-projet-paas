@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAI-Cameroun | Déploiement Cloud</title>
+    <style>
+        /* Design System */
+        :root {
+            --main-bg: #f5f7fa;
+            --brand-color: #6366f1; /* Indigo moderne */
+            --text-title: #1e293b;
+            --text-body: #475569;
+            --card-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: var(--text-body);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Carte principale */
+        .glass-card {
+            background: var(--card-white);
+            max-width: 900px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Section Gauche : Contenu principal */
+        .main-content {
+            padding: 60px;
+        }
+
+        .tag {
+            background: #eef2ff;
+            color: var(--brand-color);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: var(--text-title);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: var(--brand-color);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* Section Droite : Infos techniques */
+        .side-info {
+            background: #fcfcfd;
+            padding: 60px;
+            border-left: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-group {
+            margin-bottom: 30px;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .info-sub {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* Petit badge Render flottant */
+        .render-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .glass-card { grid-template-columns: 1fr; }
+            .main-content, .side-info { padding: 40px; }
+            .side-info { border-left: none; border-top: 1px solid #f1f5f9; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <div class="main-content">
+            <span class="tag">PaaS Showcase</span>
+            <h1>Démonstration <span>Réussie</span></h1>
+            
+            <p class="description">
+                Cette application web illustre le déploiement sur la plateforme <strong>Render</strong>. 
+                L'infrastructure est orchestrée automatiquement, permettant un focus total sur le développement logiciel.
+            </p>
+
+            <div class="render-status">
+                <div class="dot"></div>
+                Hébergé sur Render (Live)
+            </div>
+        </div>
+
+        <div class="side-info">
+            <div class="info-group">
+                <p class="info-label">Développeur</p>
+                <p class="info-value">Djouka julia</p>
+                <p class="info-sub">IAI-Cameroun • Génie Logiciel 2</p>
+            </div>
+
+            <div class="info-group">
+                <p class="info-label">Examinateur</p>
+                <p class="info-value">M. ELLA</p>
+                <p class="info-sub">Évaluation du module Cloud</p>
+            </div>
+
+            <div class="info-group" style="margin-bottom: 0;">
+                <p class="info-label">Technologie</p>
+                <p class="info-value">HTML5 / CSS3 / JS</p>
+                <p class="info-sub">Full Responsive Design</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
